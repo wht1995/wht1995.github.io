@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue 组件/路由懒加载 | VC&#39;s Blog</title>
+    <meta name="description" content="记录一下叭🐌">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.058b2d67.css" as="style"><link rel="preload" href="/assets/js/app.3d620a6f.js" as="script"><link rel="preload" href="/assets/js/24.196726eb.js" as="script"><link rel="prefetch" href="/assets/js/10.0ab68627.js"><link rel="prefetch" href="/assets/js/11.79396d94.js"><link rel="prefetch" href="/assets/js/12.c84ca706.js"><link rel="prefetch" href="/assets/js/13.cc9287f8.js"><link rel="prefetch" href="/assets/js/14.69138d78.js"><link rel="prefetch" href="/assets/js/15.971bb51c.js"><link rel="prefetch" href="/assets/js/16.1e10d839.js"><link rel="prefetch" href="/assets/js/17.e96aff6e.js"><link rel="prefetch" href="/assets/js/18.5ee51ef9.js"><link rel="prefetch" href="/assets/js/19.dfabf67f.js"><link rel="prefetch" href="/assets/js/2.fe4a76b1.js"><link rel="prefetch" href="/assets/js/20.45e6fa32.js"><link rel="prefetch" href="/assets/js/21.9d90f167.js"><link rel="prefetch" href="/assets/js/22.bc222999.js"><link rel="prefetch" href="/assets/js/23.50e02b83.js"><link rel="prefetch" href="/assets/js/25.35b23e5c.js"><link rel="prefetch" href="/assets/js/26.30b67b5e.js"><link rel="prefetch" href="/assets/js/27.dd5f26e2.js"><link rel="prefetch" href="/assets/js/28.5bb22549.js"><link rel="prefetch" href="/assets/js/29.cd1a78d5.js"><link rel="prefetch" href="/assets/js/3.b6b016ad.js"><link rel="prefetch" href="/assets/js/30.a08bb659.js"><link rel="prefetch" href="/assets/js/31.b6a25c09.js"><link rel="prefetch" href="/assets/js/4.975d3a1f.js"><link rel="prefetch" href="/assets/js/5.e5a53480.js"><link rel="prefetch" href="/assets/js/6.3c214a26.js"><link rel="prefetch" href="/assets/js/7.29aba97e.js"><link rel="prefetch" href="/assets/js/8.2c61a77c.js"><link rel="prefetch" href="/assets/js/9.c38e0b2c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.058b2d67.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">VC's Blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">notes</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link router-link-active">javaScript</a></li><li class="dropdown-item"><!----> <a href="/html/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----> <a href="/http/" class="nav-link">Http/浏览器/性能</a></li><li class="dropdown-item"><h4>后端</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/nodejs/" class="nav-link">NodeJs</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><a href="https://github.com/wht1995" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">notes</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link router-link-active">javaScript</a></li><li class="dropdown-item"><!----> <a href="/html/" class="nav-link">HTML/CSS</a></li><li class="dropdown-item"><!----> <a href="/http/" class="nav-link">Http/浏览器/性能</a></li><li class="dropdown-item"><h4>后端</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/nodejs/" class="nav-link">NodeJs</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><a href="https://github.com/wht1995" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/" class="sidebar-link">说明</a></li><li><a href="/js/closure.html" class="sidebar-link">闭包</a></li><li><a href="/js/crossOrigin.html" class="sidebar-link">跨域</a></li><li><a href="/js/Event-Loop.html" class="sidebar-link">Event-Loop</a></li><li><a href="/js/debounce_throttle.html" class="sidebar-link">防抖与节流</a></li><li><a href="/js/class_basic.html" class="sidebar-link">Class 的基本语法</a></li><li><a href="/js/class_inherit.html" class="sidebar-link">Class 的继承</a></li><li><a href="/js/Set_WeakSet.html" class="sidebar-link">Set 数据结构</a></li><li><a href="/js/Map_WeakMap.html" class="sidebar-link">Map 数据结构</a></li><li><a href="/js/Vue 生命周期.html" class="sidebar-link">Vue 生命周期</a></li><li><a href="/js/Vue 组件路由懒加载.html" class="active sidebar-link">Vue 组件/路由懒加载</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/Vue 组件路由懒加载.html#用法" class="sidebar-link">用法</a></li><li class="sidebar-sub-header"><a href="/js/Vue 组件路由懒加载.html#路由加载" class="sidebar-link">路由加载</a></li><li class="sidebar-sub-header"><a href="/js/Vue 组件路由懒加载.html#组件加载" class="sidebar-link">组件加载</a></li><li class="sidebar-sub-header"><a href="/js/Vue 组件路由懒加载.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/js/js1.html" class="sidebar-link">JavaScript 基础</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="vue-组件-路由懒加载"><a href="#vue-组件-路由懒加载" aria-hidden="true" class="header-anchor">#</a> Vue 组件/路由懒加载</h1> <h2 id="用法"><a href="#用法" aria-hidden="true" class="header-anchor">#</a> 用法</h2> <ul><li>Vue 异步加载组件</li> <li>ES6 中 import 加载</li></ul> <h2 id="路由加载"><a href="#路由加载" aria-hidden="true" class="header-anchor">#</a> 路由加载</h2> <ol><li><p>未使用 <code>路由懒加载</code> 的实现如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+    <span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+    <span class="token keyword">import</span> HelloWorld <span class="token keyword">from</span> <span class="token string">'@/components/HelloWorld'</span>
+
+    Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Router<span class="token punctuation">)</span>
+
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+                name<span class="token punctuation">:</span> <span class="token string">'HelloWorld'</span><span class="token punctuation">,</span>
+                component<span class="token punctuation">:</span>HelloWorld
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>使用 Vue 异步加载组件 (resolve)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+　　<span class="token comment">/* 此处省去之前导入的HelloWorld模块 */</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Router<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      name<span class="token punctuation">:</span> <span class="token string">'HelloWorld'</span><span class="token punctuation">,</span>
+      component<span class="token punctuation">:</span> resolve<span class="token operator">=&gt;</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;@/components/HelloWorld&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>resolve<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>使用 import</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Router<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      name<span class="token punctuation">:</span> <span class="token string">'HelloWorld'</span><span class="token punctuation">,</span>
+      component<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/components/HelloWorld&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></li></ol> <h2 id="组件加载"><a href="#组件加载" aria-hidden="true" class="header-anchor">#</a> 组件加载</h2> <ol><li><p>未使用 <code>组件懒加载</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;hello&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>One<span class="token operator">-</span>com<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>One<span class="token operator">-</span>com<span class="token operator">&gt;</span>
+  <span class="token number">1111</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> One <span class="token keyword">from</span> <span class="token string">'./one'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">&quot;One-com&quot;</span><span class="token punctuation">:</span>One
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      msg<span class="token punctuation">:</span> <span class="token string">'Welcome to Your Vue.js App'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+</code></pre></div></li> <li><p>异步组件加载(resolve)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;hello&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>One<span class="token operator">-</span>com<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>One<span class="token operator">-</span>com<span class="token operator">&gt;</span>
+  <span class="token number">1111</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">&quot;One-com&quot;</span><span class="token punctuation">:</span>resolve<span class="token operator">=&gt;</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'./one'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>resolve<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      msg<span class="token punctuation">:</span> <span class="token string">'Welcome to Your Vue.js App'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div></li> <li><p>使用 import</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;hello&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>One<span class="token operator">-</span>com<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>One<span class="token operator">-</span>com<span class="token operator">&gt;</span>
+  <span class="token number">1111</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">&quot;One-com&quot;</span><span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;./one&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      msg<span class="token punctuation">:</span> <span class="token string">'Welcome to Your Vue.js App'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div></li></ol> <h2 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h2> <p><strong>1、</strong> 路由页面以及路由页面中的组件全都使用懒加载</p> <p>优点：</p> <ul><li>最大化的实现随用随载</li> <li>团队开发不会因为沟通问题造成资源的重复浪费</li></ul> <p>缺点：</p> <ul><li>当一个页面中嵌套多个组件时将发送多次的 http 请求，可能会造成网页显示过慢且渲染参差不齐的问题</li></ul> <p><strong>2、</strong> 路由页面使用懒加载， 而路由页面中的组件按需进行懒加载, 即如果组件不大且使用不太频繁, 直接在路由页面中导入组件, 如果组件使用较为频繁使用懒加载</p> <p>优点：</p> <ul><li>能够减少页面中的 http 请求，页面显示效果好</li></ul> <p>缺点：</p> <ul><li>需要团队事先交流， 在框架中分别建立懒加载组件与非懒加载组件文件夹</li></ul> <p><strong>3、</strong> 路由页面使用懒加载，在不特别影响首页显示延迟的情况下，根页面合理导入复用组件，再结合方案二</p> <p>优点：</p> <ul><li><p>合理解决首页延迟显示问题</p></li> <li><p>能够最大化的减少 http 请求， 且做其他他路由界面的显示效果最佳</p></li></ul> <p>缺点：</p> <ul><li>还是需要团队交流，建立合理区分各种加载方式的组件文件夹</li></ul></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.3d620a6f.js" defer></script><script src="/assets/js/24.196726eb.js" defer></script>
+  </body>
+</html>
